@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: "Semmeln Maps",
+    description: "Route planing and optimisation application for local backeries",
+    tech: "React Native, Expo, Google-API",
+    link: "/",
+    repo: "https://github.com/doppelpack/semmeln-app",
+    img: "../src/img/Semmeln_Nav.png"
+  },
+  {
+    title: "V.E.R.G.A",
+    description: "Virtual Extrodinary Revolutionary Gaming Aplication",
+    tech: "Python, Tkinter, PostgreSQL, SteamAPI",
+    link: "/",
+    repo: "https://github.com/HaraldHaarig/V.E.R.G.A",
+    img: "../src/img/Verga.png"
+  },
+  {
+    title: "B.I.O.M.B.O",
+    description: "Brilliant Interactive Otherworldly M Bot Operation",
+    tech: "(Micro)Python, Django, React, MBot",
+    link: "/",
+    repo: "https://github.com/sonrotz0815/SYP_Mbot2_B.I.O.M.B.O",
+    img: "../src/img/MBOT.png"
+  },
+  {
+    title: "Admin-Panel-PictureDrop",
+    description: "Admin Panel for PictureDrop",
+    tech: "Angular, Nest.js, Figma",
+    link: "/",
+    repo: "https://github.com/binmarkoo/Admin-Panel-PictureDrop",
+    img: "../src/img/CP.png"
+  },
+  {
+    title: "Intrusion Detection System",
+    description: "Application to detect movement and alarm you per email and sound on an raspberryPi",
+    tech: "Python, raspberryPi, RedisDB, Streamlit",
+    link: "/",
+    repo: "https://github.com/sonrotz0815/PI_IntrusionDetectionSystem",
+    img: "https://imgs.search.brave.com/caHVYNOrgmi01dLvvrkbLOT1FeIvvqcTj1aH9XQGt8E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy13b3JsZC5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MDgvUmFzcGJlcnJ5/LVBpLUxvZ28tNTAw/eDI4MS5qcGc"
+  },
+  {
+    title: "Beatstrap",
+    description: "Python, Discord",
+    tech: "Angular, Nest.js, Figma",
+    link: "/",
+    repo: "https://github.com/binmarkoo/Admin-Panel-PictureDrop",
+    img: "../src/img/Beats_Trap.png"
+  },
+];
+---
+<BaseLayout title="Projekte">
+<style>
+  .section-title {
+  @apply text-5xl font-extrabold mb-14 text-center tracking-tight;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  color: transparent}
+</style>
+  <h2 class="section-title">Meine Projekte</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    {projects.map(project => <ProjectCard {...project} />)}
+  </div>
+</BaseLayout>

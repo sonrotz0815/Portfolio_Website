@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Timeline from '../components/Timeline.astro';
+
+const events = [
+  { year: "2013 - 2017", title: "Volksschule Schwarzach i. Pongau", description: "Besuch der Grundschule" },
+  { year: "2017 - 2021", title: "Borg St.Johann i. Pongau", description: "Besuch des Unterstufen Gymnasiums" },
+  { year: "2023", title: "Praktikum: IT-Support", description: "4 Wöchiges Praktikum im Kardinal Schwarzenberg Klinikum als IT-Support" },
+  { year: "2025", title: "Praktikum: DevOps / Dev", description: "7 Wöchiges Praktikum im Unternehmen Eurofunk Kappacher als Trainee-DevOp / Developer" },
+  { year: "2021 - 2026", title: "HTL-Saalfelden / Pongau", description: "Besuch der HTL-Saalfelden/Pongau" }
+];
+---
+<style>
+  .section-title {
+    @apply text-5xl font-extrabold mb-14 text-center tracking-tight drop-shadow-md;
+    background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+</style>
+
+<BaseLayout title="Über mich">
+  <section class="p-8 rounded-2xl fade-in">
+
+    <h2 class="section-title">Über mich</h2>
+
+    <p class="text-gray-700 leading-relaxed mb-6 text-lg max-w-3xl mx-auto">
+      Ich habe mich schon immer von Technologie begeistert lassen, ob der Computer meiner Oma als kleines Kind oder jetzt als großes Kind, ein RaspberryPi und das Linux-Betriebssystem. Ich bin tatsächlich ein Fan seine angefangen Hobby-Projekte auch zu beenden
+    </p>
+
+    <div class="my-12 border-t border-gray-300/40 w-3/4 mx-auto"></div>
+
+    <h3 class="text-3xl font-semibold mb-6 text-center bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+      Mein Werdegang
+    </h3>
+
+    <div class="max-w-3xl mx-auto">
+      <Timeline events={events} />
+    </div>
+
+  </section>
+</BaseLayout>

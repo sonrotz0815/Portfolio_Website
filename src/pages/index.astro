@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+<style>
+  .workImg{
+  position: absolute;
+  top: 0.5rem;   /* distance from top */
+  right: 4rem;  /* distance from rigth */
+  width: 8em; /* adjust size */
+  height: 8em;
+  border-radius: 0.5rem; /* optional, rounded corners */
+  object-fit: cover;
+  }
+</style>
+
+<BaseLayout title="Startseite">
+  <HeroSection 
+    title="Eric König"
+    subtitle="Diese Seite soll mich demjenigen näher bringen der sich hierher verirrt hat. Das wichtigste zuerst meine bisherigen..."
+    ctaText="Projekte"
+    ctaLink="/projects"
+    img="../src/img/prof_img.JPG"
+  />
+  <div class="p-5 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition relative">
+  <h3 class="text-xl font-semibold mb-2">Work in Progress:</h3>
+  <img class="workImg" src="../src/img/Semmeln_Nav.png" alt="Semmeln Maps">
+  <p class="text-gray-600 mb-2">Diplomarbeit: Semmeln Maps</p>
+  <p class="text-sm text-gray-500 mb-4">Technologien: React Native, Expo, Google-API</p>
+  </div>
+</BaseLayout>

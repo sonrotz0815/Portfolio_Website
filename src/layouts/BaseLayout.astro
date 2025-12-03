@@ -1,0 +1,22 @@
+---
+const { title = "Portfolio", description = "Mein persönliches Portfolio" } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="../src/img/application.png" />
+  </head>
+  <body class="bg-white text-gray-800 flex flex-col min-h-screen max-w">
+    <Header />
+    <main class="flex-grow max-w mx-auto p-6">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+ <!-- <a href="https://www.flaticon.com/free-icons/portfolio" title="portfolio icons">Portfolio icons created by Eucalyp - Flaticon</a> -->

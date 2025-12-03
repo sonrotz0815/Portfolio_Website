@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<style>
+  .section-title {
+  @apply text-5xl font-extrabold mb-14 text-center tracking-tight;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  color: transparent}
+</style>
+
+<BaseLayout title="Kontakt">
+  <section class="max-w mx-auto py-12 animate-fadeIn rounded-3xl shadow-inner">
+    <h2 class="section-title">
+      Kontakt aufnehmen
+    </h2>
+
+    <p class="text-purple-700 mb-10 text-center max-w-xl mx-auto text-lg font-semibold tracking-wide">
+      Melden Sie sich einfach über eine der folgenden Wege => 
+    </p>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Card: Email -->
+      <div class="p-6 rounded-3xl shadow-lg bg-white border border-purple-100 hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+        <h3 class="font-extrabold text-xl text-purple-700 mb-2 flex items-center gap-3">
+          <span class="material-icons text-purple-500 text-3xl">Mail</span> E-Mail
+        </h3>
+        <a href="mailto:erickonig7@gmail.com" class="text-purple-700 hover:text-purple-900 break-all font-medium">
+          erickonig7@gmail.com
+        </a>
+      </div>
+
+      <!-- Card: Telefon -->
+      <div class="p-6 rounded-3xl shadow-lg bg-white border border-purple-100 hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+        <h3 class="font-extrabold text-xl text-purple-700 mb-2 flex items-center gap-3">
+          <span class="material-icons text-purple-500 text-3xl">Call</span> Telefon
+        </h3>
+        <p class="text-purple-800 font-medium">+43 660 8328730</p>
+      </div>
+
+      <!-- Card: LinkedIn -->
+      <div class="p-6 rounded-3xl shadow-lg bg-white border border-purple-100 hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+        <h3 class="font-extrabold text-xl text-purple-700 mb-2 flex items-center gap-3">
+          <span class="material-icons text-purple-500 text-3xl">Work</span> LinkedIn
+        </h3>
+        <a href="https://www.linkedin.com/in/eric-k%C3%B6nig-879250341/" target="_blank" class="text-purple-700 hover:text-purple-900 font-medium">
+          www.linkedin.com/in/eric-koenig
+        </a>
+      </div>
+
+      <!-- Card: GitHub -->
+      <div class="p-6 rounded-3xl shadow-lg bg-white border border-purple-100 hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+        <h3 class="font-extrabold text-xl text-purple-700 mb-2 flex items-center gap-3">
+          <span class="material-icons text-purple-500 text-3xl">Code</span> GitHub
+        </h3>
+        <a href="https://github.com/sonrotz0815" target="_blank" class="text-purple-700 hover:text-purple-900 font-medium">
+          github.com/eric_k
+        </a>
+      </div>
+
+    <!-- CTA Section -->
+    <div class="col-span-full text-center mt-12">
+      <a href="mailto:max.mustermann@example.com" class="inline-block px-12 py-4 rounded-full bg-gradient-to-r from-purple-600 to-purple-900 text-white font-extrabold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300">
+        Nachricht senden
+      </a>
+    </div>
+  </section>
+</BaseLayout>
