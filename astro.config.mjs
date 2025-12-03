@@ -2,7 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  output: 'static',      // important for SWA
-  dist: 'dist',          // default build folder
+  output: 'static',      // generate a static site
+  build: {
+    outDir: 'dist',      // correct key for build output
+  },
   integrations: [tailwind()],
 });
